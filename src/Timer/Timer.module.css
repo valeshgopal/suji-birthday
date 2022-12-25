@@ -1,0 +1,79 @@
+.countdown {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.countdown > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.duration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 100px;
+  height: 100px;
+  font-weight: 500;
+  border: 5px solid var(--color-secondary);
+  border-radius: 50%;
+}
+
+.label {
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+.message {
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 480px) {
+  .duration {
+    width: 80px;
+    height: 80px;
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .duration {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .message {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .message {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .message {
+    font-size: 2.75rem;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .message {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .message {
+    font-size: 2.25rem;
+  }
+}

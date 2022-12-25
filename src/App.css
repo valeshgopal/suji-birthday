@@ -1,38 +1,115 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: rgb(0, 255, 55);
+  --color-secondary: rgb(255, 251, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-primary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to right,
+      rgba(29, 104, 172, 0.7),
+      rgba(54, 39, 72, 0.7)
+    ),
+    url('/public/assets/suji.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 0.5rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 1.25rem;
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+  font-family: 'Parisienne', sans-serif;
+  font-size: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+@media screen and (max-width: 767px) {
+  .heading {
+    font-size: 3.5rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .subheading {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    background: linear-gradient(
+        to right,
+        rgba(29, 104, 172, 0.7),
+        rgba(54, 39, 72, 0.7)
+      ),
+      url('/public/assets/suji-mobile.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .heading {
+    font-size: 2.75rem;
+  }
+
+  .subheading {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .heading {
+    font-size: 2.25rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
   }
 }
