@@ -2,12 +2,13 @@ import styles from './Timer.module.css';
 import React from 'react';
 import Countdown from 'react-countdown';
 
-const Timer = () => {
+const Timer = ({ setTimerDone }) => {
   const Completionist = () => (
     <span className={styles.message}>Happy Birthday Suji!🎂</span>
   );
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
+      setTimerDone(true);
       // Render a completed state
       return <Completionist />;
     } else {

@@ -1,15 +1,17 @@
 import './App.css';
 import Timer from './Timer/Timer';
+import React from 'react';
 
 function App() {
+  const [timerDone, setTimerDone] = React.useState(false);
   return (
     <div className='container'>
       <div className='content'>
-        <h2 className='heading'>Suji Birthday Countdown</h2>
+        {!timerDone && <h2 className='heading'>Suji Birthday Countdown</h2>}
         <p className='subheading'>
           Birthday: Jan 5<sup>th</sup>
         </p>
-        <Timer />
+        <Timer setTimerDone={setTimerDone} />
       </div>
     </div>
   );
